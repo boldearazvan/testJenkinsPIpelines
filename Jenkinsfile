@@ -14,6 +14,7 @@ pipeline {
                    writeFile(file: 'zorg.txt', text: data)
                    sh "ls -l"
                }
+               parameters [string(name: 'orderNumber', value: '11')]
            }
        }        
     }
