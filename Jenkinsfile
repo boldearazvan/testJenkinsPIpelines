@@ -14,7 +14,7 @@ pipeline {
                    writeFile(file: 'zorg.txt', text: data)
                    sh "ls -l"
                }
-
+               archiveArtifacts artifacts: 'zorg.txt', followSymlinks: false, onlyIfSuccessful: true
            }
        }        
     }
